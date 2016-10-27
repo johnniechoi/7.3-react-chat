@@ -55,7 +55,7 @@ var Chat = React.createClass({
   },
   renderForm: function(){
     return !this.state.username ? null : (
-      <form className="well" onSubmit={this.handleFormSubmit}>
+      <form className="well footer" onSubmit={this.handleFormSubmit}>
         <input onChange={this.handleFormContent} name="title" value={this.state.content} placeholder="Chat..." />
         <button type="submit" className="btn btn-success">Submit</button>
       </form>

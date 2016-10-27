@@ -11,8 +11,7 @@ var Chat = require('./components/chat.jsx').Chat;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    '': 'index',
-    'chat/': 'chat'
+    '': 'chat'
   },
   initialize: function(){
     this.username = '';
@@ -24,6 +23,7 @@ var AppRouter = Backbone.Router.extend({
     );
   },
   chat: function(){
+    console.log('hello');
     var collection = new MessageCollection();
     setInterval(() => collection.fetch(), 3000);
 

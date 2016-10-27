@@ -67,13 +67,12 @@ var Chat = React.createClass({
   renderChatListing: function(){
     var collection = this.getCollection();
     var listOfContent = collection.map((message) => {
-      console.log(message);
       var content = message.get('content');
       var time = moment(message.get('time')).format('MMMM Do, YYYY HH:mm');
       var username = message.get('username');
       return !message.get('time') ? null : (
         <li key={message.get('_id') || message.cid} className="well">
-          <span className="h4">{`${username}`}</span>{`: ${content} at ${time}`}
+          <span> {`${username} ${content} at ${time}`}</span>
         </li>
       );
     });
